@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
         android:text="Convert LBP and USD"
-        android:textColor="#3F51B5"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
