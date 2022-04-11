@@ -38,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
+        android:onClick="nextPage"
         android:text="Convert LBP and USD"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
