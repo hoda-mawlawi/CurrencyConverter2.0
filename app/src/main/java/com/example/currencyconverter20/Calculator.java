@@ -3,7 +3,8 @@ package com.example.currencyconverter20;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.Toast;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,13 +14,19 @@ public class Calculator extends AppCompatActivity {
 
     boolean usd_to_lbp = true;
     float rate = 24;
+    TextView final_amount;
+    EditText amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //get exhange rate
+        final_amount = findViewById(R.id.finalAmount);
+        amount = findViewById(R.id.amount);
+
+
+        //get daily exhange rate
 
         ToggleButton toggle = (ToggleButton) findViewById(R.id.toggleButton);
         ToggleButton toggle2 = (ToggleButton) findViewById(R.id.toggleButton2);
@@ -50,9 +57,11 @@ public class Calculator extends AppCompatActivity {
 
     public void convert (View v) {
         if (usd_to_lbp) {
-
+            float result = Float.parseFloat(amount.getText().toString()) * rate;
+            final_amount.setText(result + "");
         } else {
-
+            float result = Float.parseFloat(amount.getText().toString()) * (1/rate);
+            final_amount.setText(result + "");
         }
     }
 
